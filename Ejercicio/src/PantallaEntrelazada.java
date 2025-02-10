@@ -26,7 +26,7 @@ public class PantallaEntrelazada {
     }
 
     public void establecerPixel(Coordenada coordenada, int color) {
-
+        int ancho = this.resolucion.getAncho();
         int dondeEsta = coordenada.obtenerX() > (ancho / 2) ? 1 : 0;
         Coordenada coordenadaRelativa = new Coordenada(coordenada.obtenerX() - (ancho / 2) * dondeEsta,
                 coordenada.obtenerY());
