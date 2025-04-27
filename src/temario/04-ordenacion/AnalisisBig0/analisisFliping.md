@@ -1,16 +1,14 @@
 ## Pancake Sort (Flipping)
 
-### Complejidad (Notación Big O)
+| Paso / Componente       | Conteo aproximado                                         | Notación |
+|-------------------------|-----------------------------------------------------------|----------|
+| **Inicialización**      | 1 operación (variables de índice y tamaño actual)         | O(1)     |
+| **Bucle principal**     | n-1 iteraciones (tamaños de subarreglo de n a 2)          | O(n)     |
+| **Búsqueda del máximo** | ≃ ∑ᵢ₌₂ⁿ i = n(n+1)/2 – 1 ≃ O(n²)                            | O(n²)    |
+| **Flip al prefijo**     | ≃ ∑ᵢ₌₂ⁿ i = n(n+1)/2 – 1 ≃ O(n²)                            | O(n²)    |
+| **Flip al sufijo**      | ≃ ∑ᵢ₌₂ⁿ i = n(n+1)/2 – 1 ≃ O(n²)                            | O(n²)    |
+| **Espacio auxiliar**    | Constantes (intercambio en buffer)                        | O(1)     |
 
-| Caso            | Tiempo   | Espacio |
-|-----------------|:--------:|:-------:|
-| **Mejor caso**  | O(n)     | O(1)    |
-| **Promedio**    | O(n²)    | O(1)    |
-| **Peor caso**   | O(n²)    | O(1)    |
-
-> Utiliza únicamente operaciones de “flip” (reversión de prefijos) y trabaja in-place.
-
----
 
 ### Ventajas, Desventajas y Casos de uso
 

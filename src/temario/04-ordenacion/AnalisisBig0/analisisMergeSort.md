@@ -1,10 +1,11 @@
-## Complejidad (Notación Big O)
+| Paso / Componente           | Conteo aproximado                                            | Notación       |
+|-----------------------------|--------------------------------------------------------------|----------------|
+| **Inicialización**          | 1 operación + O(n) (reservar array auxiliar de tamaño n)     | O(n)           |
+| **División recursiva**      | ≃ 2·n–1 llamadas recursivas (crea subproblemas de tamaño 1)  | O(n)           |
+| **Fusión de subarreglos**   | ≃ n comparaciones y movimientos por nivel × log₂n niveles    | O(n log n)     |
+| **Copia al array original** | ≃ n movimientos por nivel × log₂n niveles                   | O(n log n)     |
+| **Espacio auxiliar**        | n elementos (array temporal)                                 | O(n)           |
 
-| Caso           | Tiempo      | Espacio     |
-|----------------|:-----------:|:-----------:|
-| Mejor caso     | O(n log n)  | O(n)        |
-| Promedio       | O(n log n)  | O(n)        |
-| Peor caso      | O(n log n)  | O(n)        |
 
 - _n_ = número de elementos  
 - El espacio adicional O(n) corresponde a los arreglos temporales empleados en la fusión.

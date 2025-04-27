@@ -1,14 +1,11 @@
-## Complejidad (Notación Big O)
+| Paso / Componente              | Conteo aproximado                                               | Notación                        |
+|--------------------------------|-----------------------------------------------------------------|---------------------------------|
+| **Inicialización**             | 1 operación (selección de pivote, variables auxiliares)        | O(1)                            |
+| **Comparaciones (partición)**  | ≃ n comparaciones × log₂n niveles = n·log₂n                     | O(n log n) avg; O(n²) worst     |
+| **Swaps (partición)**          | ≃ n swaps × log₂n niveles = n·log₂n                             | O(n log n) avg; O(n²) worst     |
+| **Llamadas recursivas**        | ≃ 2 T(n/2) → ≈ log₂n niveles de llamadas                        | O(n) overhead                   |
+| **Espacio auxiliar**           | Profundidad de pila ≈ log₂n llamadas simultáneas                | O(log n)                        |
 
-| Caso           | Tiempo       | Espacio     |
-|----------------|:------------:|:-----------:|
-| Mejor caso     | O(n log n)   | O(log n)    |
-| Promedio       | O(n log n)   | O(log n)    |
-| Peor caso      | O(n²)        | O(log n)    |
-
-- El espacio adicional O(log n) corresponde al stack de llamadas recursivas.
-
----
 
 ## Ventajas, Desventajas y Casos de uso
 

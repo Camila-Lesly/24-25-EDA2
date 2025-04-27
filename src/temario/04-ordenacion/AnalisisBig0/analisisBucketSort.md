@@ -1,14 +1,11 @@
-## Complejidad (Notación Big O)
+| Paso / Componente         | Conteo aproximado                                         | Notación                   |
+|---------------------------|-----------------------------------------------------------|----------------------------|
+| **Inicialización**        | k operaciones (crear k cubetas)                           | O(k)                       |
+| **Distribución**          | n operaciones (asignar cada elemento a su cubeta)         | O(n)                       |
+| **Ordenación de cubetas** | promedio ≃ O(n + k) (ordenar k cubetas de tamaño ≃n/k); peor ≃ O(n²) | O(n + k) avg; O(n²) worst  |
+| **Concatenación**         | ≃ n operaciones (fusionar resultados de las cubetas)      | O(n)                       |
+| **Espacio auxiliar**      | n + k elementos (para datos y cubetas)                    | O(n + k)                   |
 
-| Caso               | Tiempo      | Espacio      |
-|--------------------|:-----------:|:------------:|
-| **Mejor caso**     | O(n + k)    | O(n + k)     |
-| **Caso promedio**  | O(n + k)    | O(n + k)     |
-| **Peor caso**      | O(n²)       | O(n + k)     |
-
-> Donde _n_ es el número de elementos y _k_ el número de cubetas.
-
----
 
 ## Análisis de Bucket Sort
 

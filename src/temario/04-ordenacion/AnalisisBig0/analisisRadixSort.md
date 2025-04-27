@@ -1,16 +1,17 @@
-## Complejidad (Notación Big O)
+## Radix Sort
 
-| Caso           | Tiempo            | Espacio         |
-|----------------|:-----------------:|:---------------:|
-| Mejor caso     | O(d·(n + k))      | O(n + k)        |
-| Promedio       | O(d·(n + k))      | O(n + k)        |
-| Peor caso      | O(d·(n + k))      | O(n + k)        |
+| Paso / Componente               | Conteo aproximado                | Notación            |
+|---------------------------------|----------------------------------|---------------------|
+| **Inicialización de contador**  | k operaciones por dígito         | O(k) por dígito     |
+| **Conteo de frecuencias**       | n operaciones por dígito         | O(n) por dígito     |
+| **Cálculo de prefijos**         | k operaciones por dígito         | O(k) por dígito     |
+| **Redistribución de elementos** | n operaciones por dígito         | O(n) por dígito     |
+| **Número de pasadas**           | d pasadas                        | Multiplica O(d)     |
+| **Total**                       | d·(n + k) operaciones            | O(d·(n + k))        |
+| **Espacio auxiliar**            | n + k elementos                  | O(n + k)            |
 
-- _n_ = número de elementos  
-- _d_ = número de dígitos del valor máximo  
-- _k_ = rango de valores posibles por dígito (por ejemplo, 10 en decimal)  
+> _n_ = número de elementos, _d_ = dígitos, _k_ = rango de valores por dígito.
 
----
 
 ## Ventajas, Desventajas y Casos de uso
 

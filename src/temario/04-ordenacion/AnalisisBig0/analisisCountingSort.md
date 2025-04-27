@@ -1,14 +1,12 @@
-## Complejidad (Notación Big O)
+| Paso / Componente       | Conteo aproximado            | Notación   |
+|-------------------------|------------------------------|------------|
+| **Inicialización**      | k operaciones (inicializar array de conteo) | O(k)       |
+| **Conteo de frecuencias** | n operaciones (recorrer array de entrada)   | O(n)       |
+| **Cálculo de prefijos** | k operaciones (sumas acumulativas)          | O(k)       |
+| **Distribución**        | n operaciones (colocar en array de salida)  | O(n)       |
+| **Copiar al original**  | n operaciones (si se copia de salida)       | O(n)       |
+| **Espacio auxiliar**    | n + k elementos (output + count)            | O(n + k)   |
 
-| Caso              | Tiempo       | Espacio       |
-|-------------------|:------------:|:-------------:|
-| **Mejor caso**    | O(n + k)     | O(n + k)      |
-| **Promedio**      | O(n + k)     | O(n + k)      |
-| **Peor caso**     | O(n + k)     | O(n + k)      |
-
-> Donde _n_ es el número de elementos y _k_ el valor máximo del rango (max(array)).
-
----
 
 ## 🔍 Análisis de Counting Sort
 

@@ -1,10 +1,12 @@
-## Complejidad (Notación Big O)
+| Paso / Componente     | Conteo aproximado    | Notación |
+|-----------------------|----------------------|----------|
+| **Inicialización**    | 1 operación          | O(1)     |
+| **Comparaciones**     | ≃ n(n–1)/2           | O(n²)    |
+| **Swaps (peor caso)** | ≃ n(n–1)/2           | O(n²)    |
+| **Bucle exterior**    | n–1 ≃ n              | O(n)     |
+| **Chequeo “flag”**    | ≤ n comparaciones    | O(n)     |
+| **Espacio auxiliar**  | Variables temporales y flag | O(1) |
 
-| Caso            | Tiempo | Espacio |
-|-----------------|:------:|:-------:|
-| **Mejor caso**     | O(n)   | O(1)    |
-| **Caso promedio**  | O(n²)  | O(1)    |
-| **Peor caso**      | O(n²)  | O(1)    |
 
 ---
 

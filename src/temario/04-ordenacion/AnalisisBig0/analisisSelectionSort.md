@@ -1,12 +1,12 @@
-## Complejidad (Notación Big O)
+| Paso / Componente         | Conteo aproximado                           | Notación |
+|---------------------------|---------------------------------------------|----------|
+| **Inicialización**        | 1 operación (variables i, j, minIndex)      | O(1)     |
+| **Bucle exterior**        | n–1 iteraciones                             | O(n)     |
+| **Bucle interior**        | ∑ᵢ₌₀ⁿ⁻² (n–1–i) = n(n–1)/2 comparaciones    | O(n²)    |
+| **Selección del mínimo**  | Incluida en las comparaciones               | O(n²)    |
+| **Intercambios**          | ≤ n–1 swaps                                 | O(n)     |
+| **Espacio auxiliar**      | Variables temporales (swap)                 | O(1)     |
 
-| Caso           | Tiempo   | Espacio |
-|----------------|:--------:|:-------:|
-| Mejor caso     | O(n²)    | O(1)    |
-| Promedio       | O(n²)    | O(1)    |
-| Peor caso      | O(n²)    | O(1)    |
-
----
 
 ## Ventajas, Desventajas y Casos de uso
 

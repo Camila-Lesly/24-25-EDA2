@@ -1,33 +1,4 @@
-# Algoritmos > Repaso e introducción
-
-## Por qué
-
-[🤔](🤔.md)
-
-Hemos de comprender lo que estamos diseñando, dado que es crucial para lograr soluciones efectivas: eficaces vs eficientes.
-
-Debe existir alguna manera de medir la efectividad de los algoritmos. A lo mejor no en términos de tiempo real (sería imposible dada la cantidad de escenarios que se pueden abordar), sino en cómo su tiempo de ejecución o espacio requerido varía en función del tamaño de la entrada.
-
-
-## Qué
-
-Los algoritmos son procedimientos o fórmulas para resolver problemas. Pueden ser tan simples como un procedimiento de suma o tan complejos como el algoritmo que subyace a un motor de búsqueda en Internet. Los algoritmos se definen por su claridad, precisión y la finitud de sus pasos. (Visto en [Programación 1](https://github.com/mmasias/23-24-prg1/blob/main/temario/001-Algoritmos.md))
-
-## Para qué
-
-- **Predecir** el rendimiento de los algoritmos en diferentes condiciones.
-- **Elegir** el algoritmo más eficiente y adecuado para una tarea específica, optimizando recursos.
-- **Diseñar y desarrollar** soluciones de software escalables que puedan manejar un crecimiento en el volumen de datos sin degradar significativamente el rendimiento.
-
-## Cómo
-
-|Análisis del problema|Diseño de la solución|Evaluación de la eficiencia|
-|-|-|-|
-|Identificar claramente los datos de entrada y la salida esperada|Descomponer el problema en subproblemas más pequeños|Analizar el tiempo de ejecución esperado|
-|Determinar las restricciones y casos especiales|Identificar patrones y estructuras de datos apropiadas|Considerar el uso de memoria|
-|Considerar el volumen de datos a manejar|Considerar diferentes enfoques (iterativo vs recursivo, etc.)|Identificar posibles cuellos de botella|
-
-### Ej.: una búsqueda
+## Ej.: una búsqueda
 
 ```java
 static final int NO_ENCONTRADO = -1;

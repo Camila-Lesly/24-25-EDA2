@@ -1,11 +1,10 @@
 ## Complejidad (Notación Big O)
 
-| Caso           | Tiempo      | Espacio  |
-|----------------|:-----------:|:--------:|
-| Mejor caso     | O(n log n)  | O(1)     |
-| Promedio       | O(n log n)  | O(1)     |
-| Peor caso      | O(n log n)  | O(1)     |
-
+| Paso / Componente        | Conteo aproximado                                             | Notación    |
+|--------------------------|---------------------------------------------------------------|-------------|
+| **Inicialización**       | ≃ n operaciones (heapify bottom-up para construir el montículo) | O(n)        |
+| **Extracción & heapify** | ≃ n·log n operaciones (por cada extracción: swap + heapify)    | O(n log n)  |
+| **Espacio auxiliar**     | Constantes (swap temporal)                                    | O(1)        |
 ---
 
 ## Ventajas, Desventajas y Casos de uso

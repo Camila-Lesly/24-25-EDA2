@@ -1,10 +1,11 @@
-## Complejidad (Notación Big O)
+| Paso / Componente            | Conteo aproximado                                                     | Notación           |
+|------------------------------|-----------------------------------------------------------------------|--------------------|
+| **Inicialización**           | 1 operación (cálculo de profundidad máxima `2·⌊log₂n⌋`, umbrales, variables de control) | O(1)               |
+| **Quicksort recursivo**      | ≃ 2·n·log₂n comparaciones (≈2n por nivel × log₂n niveles)             | O(n·log n) promedio |
+| **HeapSort (fallback)**      | ≤ n·log₂n comparaciones (heapify + extracciones al superar profundidad)  | O(n·log n) peor    |
+| **Insertion Sort (pequeños)**| ≃ (t/2)·n comparaciones (ordenación de subarreglos ≤ t; t constante)     | O(n)               |
+| **Espacio auxiliar**         | ≃ 2·log₂n niveles de recursión (stack de llamadas)                    | O(log n)           |
 
-| Caso           | Tiempo      | Espacio     |
-|----------------|:-----------:|:-----------:|
-| **Mejor caso** | O(n log n)  | O(log n)    |
-| **Promedio**   | O(n log n)  | O(log n)    |
-| **Peor caso**  | O(n log n)  | O(log n)    |
 
 > El espacio adicional corresponde al stack de recursión de QuickSort/HeapSort (profundidad O(log n)).  
 
