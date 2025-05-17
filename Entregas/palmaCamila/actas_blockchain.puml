@@ -1,0 +1,82 @@
+@startuml
+
+package Entregas.palmaCamila {
+
+  interface IHashable {
+    + generarHash(): String
+  }
+
+  class Persona {
+    - nombre: String
+    - apellido: String
+    + Persona(nombre: String, apellido: String)
+    + getNombre(): String
+    + getApellido(): String
+  }
+
+  class LeerNotas {
+    + static leerNota(sc: Scanner, descripcion: String): int
+  }
+
+  class Estudiante {
+    - studentId: String
+    - evalContinua: int
+    - evalProfesor: int
+    - examenParcial: int
+    - examenFinal: int
+    + Estudiante()
+    + calcularPromedio(): double
+    + generarHash(): String
+    + getStudentId(): String
+    + getEvalContinua(): int
+    + getEvalProfesor(): int
+    + getExamenParcial(): int
+    + getExamenFinal(): int
+  }
+
+  class Bloque {
+    - hash: String
+    - hashAnterior: String
+    - estudiante: Estudiante
+    - timestamp: long
+    + Bloque(estudiante: Estudiante, hashAnterior: String)
+    + calcularHash(): String
+    + getHash(): String
+    + getHashAnterior(): String
+    + getEstudiante(): Estudiante
+    + getTimestamp(): long
+  }
+
+  class ActaCalificaciones {
+    - cadena: List<Bloque>
+    + ActaCalificaciones()
+    + agregarEstudiante(e: Estudiante)
+    + verificarIntegridad(): boolean
+    + getCadena(): List<Bloque>
+  }
+
+  class MenuServicios {
+    + procesarAnadirActa(acta: ActaCalificaciones, sc: Scanner): void
+    + procesarMostrarTodasActas(acta: ActaCalificaciones, fmt: SimpleDateFormat): void
+    + procesarVerificarIntegridad(acta: ActaCalificaciones): void
+    + procesarBuscarActaPorId(acta: ActaCalificaciones, sc: Scanner, fmt: SimpleDateFormat): void
+    + procesarSalirDelSistema(): void
+  }
+
+  class InterfazBlockchainActas {
+    + main(args: String[]): void
+    - mostrarMenuPrincipal(): void
+  }
+
+  Persona <|-- Estudiante
+  Estudiante --|> IHashable
+  Bloque --|> Estudiante : contiene
+  ActaCalificaciones --|> Bloque : gestiona
+  InterfazBlockchainActas --|> MenuServicios : usa
+  InterfazBlockchainActas --|> ActaCalificaciones : usa
+  MenuServicios --|> LeerNotas : usa
+  MenuServicios --|> ActaCalificaciones : usa
+
+}
+
+@enduml
